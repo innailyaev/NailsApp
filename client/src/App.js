@@ -1,9 +1,19 @@
 import './App.css';
+import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
+
+import MyCalendar from './components/calendar/MyCalendar.component';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={MyCalendar} />
+
+        </Switch>
+      </Router>
+
     </div>
   );
 }
